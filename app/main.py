@@ -15,7 +15,7 @@ class EmailRequest(BaseModel):
     subject: str
     body: str
 
-@app.post()
+@app.post("/send-email")
 def send_email_endpoint(email: EmailRequest, x_api_key: str = Header(None)):
     if x_api_key != API_SECRET_KEY:
         raise HTTPException(status_code=403, detail="Unauthorized")
