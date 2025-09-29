@@ -1,4 +1,4 @@
 fastapi
 uvicorn
 python-dotenv
-resend
+resend>=0.6.0
